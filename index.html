@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Calculadora de Passangens</title>
+</head>
+<body>
+  <div class="card">
+    <h2 class="texto-central">Calculadora de passagens</h2>
+    <hr>
+    <section>
+      <p>Valor que você tem para abastecer</p>
+      <input type="number" id="dinheiro" placeholder="Ex.: 35.76">
+    </section>
+    <section>
+      <p>Valor da passagem:</p>
+      <input type="number" id="valorPassagem"placeholder="Ex.: 35.76">
+    </section>
+    <section>
+      <p>Quantidade de viagens por dia</p>
+      <input type="number" id="viagens"placeholder="Ex.: 4">
+    </section>
+    <button type="submit" onclick="calcular()">Calcular</button>
+    <h4 class="texto-central" id="resultado"></h4>
+    <h4 class="texto-central" id="saldoRemanescente"></h4>
+  </div>
+
+</body>
+</html>
