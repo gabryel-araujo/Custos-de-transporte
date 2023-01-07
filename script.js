@@ -69,7 +69,12 @@ function calcularConsumo(){
 
     var consumo = (distancia / autonomia);
 
-    document.getElementById("resultadoConsumo").innerHTML = "Para fazer o percuso de " + distancia + "Km " + "você gastará " + consumo + "L de gasolina.";
+    document.getElementById("resultadoConsumo").innerHTML = "Para fazer o percuso de " + distancia + "Km " + "você gastará " + consumo.toFixed(2) + "L de gasolina.";
+
+    if(opcao === "diario") {
+      custo = (consumo * precoCombustivel);
+      document.getElementById("resultado3").innerHTML = "Isso te gerará um custo diário de R$" + custo.toFixed(2);
+    }
 
     if(opcao === "semanal") {
       custo = (consumo * precoCombustivel) * 6;
@@ -78,12 +83,12 @@ function calcularConsumo(){
 
     if(opcao === "quinzenal") {
       custo = (consumo * precoCombustivel) * 15;
-      document.getElementById("resultado3").innerHTML = "Isso te gerará um custo semanal de R$" + custo.toFixed(2);
+      document.getElementById("resultado3").innerHTML = "Isso te gerará um custo quinzenal de R$" + custo.toFixed(2);
     }
 
     if(opcao === "mensal") {
       custo = (consumo * precoCombustivel) * 30;
-      document.getElementById("resultado3").innerHTML = "Isso te gerará um custo semanal de R$" + custo.toFixed(2);
+      document.getElementById("resultado3").innerHTML = "Isso te gerará um custo mensal de R$" + custo.toFixed(2);
     }
   }
 
