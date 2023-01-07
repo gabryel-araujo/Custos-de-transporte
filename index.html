@@ -6,28 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
-  <title>Calculadora de Passangens</title>
+  <title>Calculadora de Custos</title>
 </head>
 <body>
-  <div class="card">
-    <h2 class="texto-central">Calculadora de passagens</h2>
-    <hr>
-    <section>
-      <p>Valor que você tem para abastecer</p>
-      <input type="number" id="dinheiro" placeholder="Ex.: 35.76">
-    </section>
-    <section>
-      <p>Valor da passagem:</p>
-      <input type="number" id="valorPassagem"placeholder="Ex.: 35.76">
-    </section>
-    <section>
-      <p>Quantidade de viagens por dia</p>
-      <input type="number" id="viagens"placeholder="Ex.: 4">
-    </section>
-    <button type="submit" onclick="calcular()">Calcular</button>
-    <h4 class="texto-central" id="resultado"></h4>
-    <h4 class="texto-central" id="saldoRemanescente"></h4>
-  </div>
+
+  <main class="container-grid">
+<!-- Calculadora de passagens -->
+    <div class="card">
+      <h2 class="texto-central">Calculadora de passagens</h2>
+      <hr>
+      <section>
+        <p>Valor que você tem para abastecer</p>
+        <input type="number" id="dinheiro" placeholder="Ex.: 35,50">
+      </section>
+      <section>
+        <p>Valor da passagem:</p>
+        <input type="number" id="valorPassagem"placeholder="Ex.: 4,60">
+      </section>
+      <section>
+        <p>Quantidade de viagens por dia</p>
+        <input type="number" id="viagens"placeholder="Ex.: 4">
+      </section>
+      <button type="submit" onclick="calcular()">Calcular</button>
+      <h4 class="texto-central" id="resultado"></h4>
+      <h4 class="texto-central" id="saldoRemanescente"></h4>
+    </div>
+<!-- Calculadora de viagens   -->
+    <div class="card">
+      <h2 class="texto-central">Calculadora de viagens</h2>
+      <hr>
+      <section>
+        <p>Insira o valor que você tem no passe:</p>
+        <input type="number" id="saldo" placeholder="Ex.: 50,00">
+      </section>
+      <section>
+        <p>Valor da passagem:</p>
+        <input type="number" id="valorPassagem2"placeholder="Ex.: 4,60">
+      </section>
+      <section>
+        <p>Quantidade de viagens por dia: </p>
+        <input type="number" id="viagens2"placeholder="Ex.: 2">
+      </section>
+      <button type="submit" onclick="calcularViagens()">Calcular</button>
+      <h4 class="texto-central" id="resultado2"></h4>
+    </div>
+<!-- Calculadora de combustível -->
+    <div class="card">
+      <h2 class="texto-central">Custo de gasolina</h2>
+      <hr>
+      <section>
+        <p>Insira a distância percorrida por dia em Km:</p>
+        <input type="number" id="km" placeholder="Ex.: 12,6">
+      </section>
+      <section>
+        <p>Qual a autonomia do seu veículo? (Km/L):</p>
+        <input type="number" id="autonomia" placeholder="Ex.: 7">
+      </section>
+      <section>
+        <p>Preço do litro da Gasolina / Etanol: </p>
+        <input type="number" id="combustivel" placeholder="Ex.: 4,79">
+      </section>
+      <section>
+        <p>Método de cáculo: </p>
+        <select id="baseCalculo">
+          <option value="">Selecione...</option>
+          <option value="diario">Diário</option>
+          <option value="semanal">Semanal - (Seg-Sáb)</option>
+          <option value="quinzenal">Quinzenal - (15 dias)</option>
+          <option value="mensal">Mensal - (30 dias)</option>
+        </select>
+      </section>
+      <button type="submit" onclick="calcularConsumo()">Calcular</button>
+      <h4 class="texto-central" id="resultadoConsumo"></h4>
+      <h4 class="texto-central" id="resultado3"></h4>
+    </div>
+  </main>
 
 </body>
 </html>
